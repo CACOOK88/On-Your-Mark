@@ -1,10 +1,8 @@
 
 // DEPENDENCIES
-// =============================================================
 var express = require("express");
 
 // EXPRESS APP AND PORT
-// =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
 
@@ -21,7 +19,6 @@ app.use(express.static("public"));
 // ROUTE JS FILES
 require("./routes/htmlRoutes.js")(app);
 require("./routes/racesApiRoutes.js")(app);
-
 
 // SYNC DB THEN START APP LISTENER
 db.sequelize.sync().then(function() {
