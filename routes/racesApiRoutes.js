@@ -17,4 +17,16 @@ module.exports = function(app) {
       }
     })
   })
+
+  app.post('/api/races', function(req, res) {
+    console.log(req.body)
+    db.Races.create({
+      // **********************************************************
+      // Check the req.body to see how we need to format the object 
+    }).then(function(data) {
+      res.json(data)
+    }).catch(function(error) {
+      res.json(error)
+    })
+  })
 }
