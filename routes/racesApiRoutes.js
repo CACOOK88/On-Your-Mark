@@ -23,6 +23,20 @@ module.exports = function(app) {
     db.Races.create({
       // **********************************************************
       // Check the req.body to see how we need to format the object 
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      raceName: req.body.raceName,
+      category: req.body.category,
+      street: req.body.street,
+      city: req.body.city,
+      state: req.body.state,
+      zip: req.body.zip,
+      phone: req.body.phone,
+      email: req.body.email,
+      url: req.body.url,
+      raceLength: req.body.raceLength,
+      description: req.body.description,
+      participantCap: req.body.participantCap
     }).then(function(data) {
       res.json(data)
     }).catch(function(error) {
