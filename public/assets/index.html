@@ -34,72 +34,6 @@
             </ul>
           </nav>
       
-<<<<<<< HEAD
-          <!-- Landing page carousel/page start -->
-    <div class="row carousel text-center w3-display-container mb-5">
-     
-        <div class="overlay"><img class="sportslide" src="./img/477452034_color_run.jpg" alt="image1"></div>
-        <div class="overlay"><img class="sportslide" src="./img/Cycling_competition_race.jpg" alt="image2"></div>
-        <div class="overlay"><img class="sportslide" src="./img/Joggers_running_outdoors_fitness_bridge.jpg" alt="image3"></div>
-      
-        <div class="centered text-white">
-        <h1 class="display-1">On Your Mark</h1>
-     
-        <!-- Drop Down Race Selection -->
-                    <label for="selectEvent" class="subhead mb-4">Select Your Event</label>
-                    <select class="form-control" id="category">
-                      <option selected>Select One...</option>
-                      <option>Running Event</option>
-                      <option>Biking Event</option>
-                      <option>Obstacle Event</option> 
-                  </select>
-                </div>
-    
-    </div>
-    <div class="container">
-      <div class="card" style="width: 54rem;">
-        <div class="card-header subhead">Event Sign Up</div>
-        <div class="card-body">
-          <form>
-            <div class="form-row">
-              <div class="form-group col-sm-4 gen-text">
-                <label for="firstName">First Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="First name">
-              </div>
-              <div class="form-group col-sm-4 gen-text">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="Last name">
-                </div>
-                <div class="form-group col-sm-4 gen-text">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email">
-                </div>
-              </div>
-              <div class="form-row gen-text">
-                <div class="form-group col-md-6">
-                  <label for="street">Address</label>
-                  <input type="text" class="form-control" id="street" placeholder="1234 Main St">
-                </div>
-                <div class="form-group col-md-6 gen-text">
-                  <label for="phone">Phone Number</label>
-                  <input type="text" class="form-control" id="phone" placeholder="(123) 456-7890">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6 gen-text">
-                  <label for="city">City</label>
-                  <input type="text" class="form-control" id="city">
-                </div>
-                <div class="form-group col-md-4 gen-text">
-                  <label for="state">State</label>
-                  <select id="state" class="form-control">
-                    <option selected>Choose...</option>
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="CA">California</option>
-=======
       <!-- Landing page carousel/page start -->
 <div class="row carousel text-center w3-display-container mb-5">
  
@@ -142,8 +76,8 @@
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+            <label for="street">Event Address</label>
+            <input type="text" class="form-control" id="street" placeholder="1234 Main St">
           </div>
           <div class="form-group col-md-6">
             <label for="phone">Phone Number</label>
@@ -164,7 +98,6 @@
               <option value="AZ">Arizona</option>
               <option value="AR">Arkansas</option>
               <option value="CA">California</option>
->>>>>>> 58975c261a3bd52ec6f0c5b69ccb12f35400e8bb
               <option value="CO">Colorado</option>
               <option value="CT">Connecticut</option>
               <option value="DE">Delaware</option>
@@ -230,6 +163,7 @@
                   <option value="other">Other</option>
                 </select>
               </div> -->
+<<<<<<< HEAD
               <div class="form-group col-md-6 gen-text">
                   <label for="url">URL</label>
                   <input type="text" class="form-control" id="url" placeholder="www.OnYourMark.com">
@@ -238,6 +172,28 @@
                   <label for="participantCap">Number of Max Participants</label>
                   <input type="text" class="form-control" id="participantCap" placeholder="">
                 </div>
+=======
+          <div class="form-group col-md-6">
+            <label for="url">URL</label>
+            <input type="text" class="form-control" id="url" placeholder="www.OnYourMark.com">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="participantCap">Number of Max Participants</label>
+            <input type="text" class="form-control" id="participantCap" placeholder="">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-4">
+            <label for="raceName">Name of Race</label>
+            <input type="text" class="form-control" id="raceName" placeholder="Race Name">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="raceDate">Anticipated Date of Race</label>
+            <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+              <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+              <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                  <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+>>>>>>> 4db42335e25ee5935cc0caecce2fc7bc91296ca4
               </div>
               <div class="form-row">
                 <div class="form-group col-sm-4 gen-text">
@@ -297,6 +253,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 
 <script>
+<<<<<<< HEAD
    var slideIndex = 0;
    carousel();
    
@@ -312,5 +269,23 @@
      setTimeout(carousel, 4000); // Change image every 4 seconds
    }
  </script>
+=======
+    var slideIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("sportslide");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1} 
+      x[slideIndex-1].style.display = "block"; 
+      setTimeout(carousel, 4000); // Change image every 4 seconds
+    }
+  </script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+>>>>>>> 4db42335e25ee5935cc0caecce2fc7bc91296ca4
 </body>
 </html>
