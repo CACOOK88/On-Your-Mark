@@ -1,4 +1,19 @@
 /* MAIN STYLING */
+* {box-sizing: border-box}
+body {
+    background-color: #55AFB8
+}
+
+.container {
+    background-color: #55AFB8;
+}
+
+.card {
+    margin: 0 auto;
+    float: none; 
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
 
 .overlay:before  {
         content: " ";
