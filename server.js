@@ -1,6 +1,7 @@
 
 // DEPENDENCIES
 var express = require("express");
+var path = require('path')
 
 // EXPRESS APP AND PORT
 var app = express();
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static("public"));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // ROUTE JS FILES
 require("./routes/htmlRoutes.js")(app);
