@@ -49,3 +49,16 @@ body {
   a:link {
     color: white;
   }
+
+  .display-1 {
+    font-family: 'Anton', sans-serif;
+  }
+
+  .subhead {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 25px;
+  }
+
+  .gen-text {
+    font-family: 'Encode Sans Condensed', sans-serif;
+  }

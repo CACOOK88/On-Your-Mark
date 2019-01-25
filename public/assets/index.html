@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Anton|Encode+Sans+Condensed|Libre+Franklin" rel="stylesheet">
+
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
@@ -23,78 +26,78 @@
         <!-- Nav Links -->
         <ul class="nav list-inline justify-content-end">
           <li class="nav-item">
-              <a class="nav-link" href="#">All Races</a>
+              <a class="nav-link" href="#">Races</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
             </li> -->
             </ul>
-      </nav>
+          </nav>
       
-      <!-- Landing page carousel/page start -->
-<div class="row carousel text-center w3-display-container mb-5">
- 
-    <div class="overlay"><img class="sportslide" src="./img/477452034_color_run.jpg" alt="image1"></div>
-    <div class="overlay"><img class="sportslide" src="./img/Cycling_competition_race.jpg" alt="image2"></div>
-    <div class="overlay"><img class="sportslide" src="./img/Joggers_running_outdoors_fitness_bridge.jpg" alt="image3"></div>
-  
-    <div class="centered text-white">
-    <h1 class="display-1">on your mark</h1>
- 
-    <!-- Drop Down Race Selection -->
-                <label for="selectEvent">Type of Event</label>
-                <select class="form-control" id="category">
-                  <option selected>Select One...</option>
-                  <option>Running Event</option>
-                  <option>Biking Event</option>
-                  <option>Obstacle Event</option> 
-              </select>
-            </div>
-
-</div>
-<div class="container">
-  <div class="card" style="width: 54rem;">
-    <div class="card-header">Event Sign Up</div>
-    <div class="card-body">
-      <form>
-        <div class="form-row">
-          <div class="form-group col-sm-4">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="First name">
-          </div>
-          <div class="form-group col-sm-4">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Last name">
-          </div>
-          <div class="form-group col-sm-4">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Email">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="1234 Main St">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="phone">Phone Number</label>
-            <input type="text" class="form-control" id="phone" placeholder="(123) 456-7890">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="city">City</label>
-            <input type="text" class="form-control" id="city">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="state">State</label>
-            <select id="state" class="form-control">
-              <option selected>Choose...</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="AR">Arkansas</option>
-              <option value="CA">California</option>
+          <!-- Landing page carousel/page start -->
+    <div class="row carousel text-center w3-display-container mb-5">
+     
+        <div class="overlay"><img class="sportslide" src="./img/477452034_color_run.jpg" alt="image1"></div>
+        <div class="overlay"><img class="sportslide" src="./img/Cycling_competition_race.jpg" alt="image2"></div>
+        <div class="overlay"><img class="sportslide" src="./img/Joggers_running_outdoors_fitness_bridge.jpg" alt="image3"></div>
+      
+        <div class="centered text-white">
+        <h1 class="display-1">On Your Mark</h1>
+     
+        <!-- Drop Down Race Selection -->
+                    <label for="selectEvent" class="subhead mb-4">Select Your Event</label>
+                    <select class="form-control" id="category">
+                      <option selected>Select One...</option>
+                      <option>Running Event</option>
+                      <option>Biking Event</option>
+                      <option>Obstacle Event</option> 
+                  </select>
+                </div>
+    
+    </div>
+    <div class="container">
+      <div class="card" style="width: 54rem;">
+        <div class="card-header subhead">Event Sign Up</div>
+        <div class="card-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-sm-4 gen-text">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First name">
+              </div>
+              <div class="form-group col-sm-4 gen-text">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last name">
+                </div>
+                <div class="form-group col-sm-4 gen-text">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-row gen-text">
+                <div class="form-group col-md-6">
+                  <label for="street">Address</label>
+                  <input type="text" class="form-control" id="street" placeholder="1234 Main St">
+                </div>
+                <div class="form-group col-md-6 gen-text">
+                  <label for="phone">Phone Number</label>
+                  <input type="text" class="form-control" id="phone" placeholder="(123) 456-7890">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6 gen-text">
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" id="city">
+                </div>
+                <div class="form-group col-md-4 gen-text">
+                  <label for="state">State</label>
+                  <select id="state" class="form-control">
+                    <option selected>Choose...</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
               <option value="CO">Colorado</option>
               <option value="CT">Connecticut</option>
               <option value="DE">Delaware</option>
@@ -143,7 +146,7 @@
               <option value="WY">Wyoming</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
+          <div class="form-group col-md-2 gen-text">
             <label for="zip">Zip</label>
             <input type="text" class="form-control" id="zip">
           </div>
@@ -160,87 +163,87 @@
                   <option value="other">Other</option>
                 </select>
               </div> -->
-          <div class="form-group col-md-6">
-            <label for="url">URL</label>
-            <input type="text" class="form-control" id="url" placeholder="www.OnYourMark.com">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="participantCap">Number of Max Participants</label>
-            <input type="text" class="form-control" id="raceName" placeholder="">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-sm-4">
-            <label for="raceName">Name of Race</label>
-            <input type="text" class="form-control" id="raceName" placeholder="Race Name">
-          </div>
-          <div class="form-group col-sm-4">
-            <label for="raceDate">Anticipated Date of Race</label>
-            <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
-              <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
-              <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
-                  <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+              <div class="form-group col-md-6 gen-text">
+                  <label for="url">URL</label>
+                  <input type="text" class="form-control" id="url" placeholder="www.OnYourMark.com">
+                </div>
+                <div class="form-group col-md-6 gen-text">
+                  <label for="participantCap">Number of Max Participants</label>
+                  <input type="text" class="form-control" id="participantCap" placeholder="">
+                </div>
               </div>
-          </div>
-          
-  <script type="text/javascript">
-    $(function () {
-        $('#datetimepicker4').datetimepicker({
-            format: 'L'
-        });
-    });
+              <div class="form-row">
+                <div class="form-group col-sm-4 gen-text">
+                  <label for="raceName">Name of Race</label>
+                  <input type="text" class="form-control" id="raceName" placeholder="Race Name">
+                </div>
+                <div class="form-group col-sm-4 gen-text">
+                  <label for="raceDate">Anticipated Date of Race</label>
+                  <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+                    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                    </div>
+                </div>
+                
+        <script type="text/javascript">
+          $(function () {
+              $('#datetimepicker4').datetimepicker({
+                  format: 'L'
+              });
+            });
 </script>
       </div>
-          <div class="form-group col-sm-4">
+          <div class="form-group col-sm-4 gen-text">
             <label for="raceLength">Length of Race (km)</label>
             <input type="text" class="form-control" id="raceLength" placeholder="Length">
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group gen-text">
           <label for="description">Tell us more about your race!</label>
           <textarea class="form-control" id="description" rows="3"></textarea>
         </div>
         <div class="form-group">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
+            <label class="form-check-label gen-text" for="invalidCheck">
               Agree to terms and conditions
             </label>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback gen-text">
               You must agree before submitting.
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary gen-text">Submit</button>
       </form>
     </div>
    </div>
    
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <!-- TEMPUS DOMINUS REFERENCE FOR DATE SELECTOR -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   <!-- TEMPUS DOMINUS REFERENCE FOR DATE SELECTOR -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 
 <script>
-    var slideIndex = 0;
-    carousel();
-    
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("sportslide");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
-      }
-      slideIndex++;
-      if (slideIndex > x.length) {slideIndex = 1} 
-      x[slideIndex-1].style.display = "block"; 
-      setTimeout(carousel, 4000); // Change image every 4 seconds
-    }
-  </script>
+   var slideIndex = 0;
+   carousel();
+   
+   function carousel() {
+     var i;
+     var x = document.getElementsByClassName("sportslide");
+     for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none"; 
+     }
+     slideIndex++;
+     if (slideIndex > x.length) {slideIndex = 1} 
+     x[slideIndex-1].style.display = "block"; 
+     setTimeout(carousel, 4000); // Change image every 4 seconds
+   }
+ </script>
 </body>
 </html>
