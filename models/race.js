@@ -24,10 +24,10 @@ module.exports = function (sequelize, DataTypes) {
         len: [3]
       }
     },
-    category: {
-      type: DataTypes.STRING, 
-      allowNull: false
-    },
+    // category: {
+    //   type: DataTypes.STRING, 
+    //   allowNull: false
+    // },
     street: {
       type: DataTypes.STRING, 
       allowNull: false,
@@ -59,31 +59,17 @@ module.exports = function (sequelize, DataTypes) {
     },
     phone: {
       type: DataTypes.INTEGER, 
-      allowNull: false,
-      isInt: true,
-      validate: {
-        len: [10,10]
-      }
+      isInt: true
     },
     email: {
-      type: DataTypes.STRING,
-      validate: {
-        isEmail: true
-      }
+      type: DataTypes.STRING
     },
     url: {
-      type: DataTypes.STRING,
-      validate: {
-        isUrl: true
-      }
+      type: DataTypes.STRING
     },
     raceLength: {
-      type: DataTypes.INTEGER, 
-      allowNull: false,
-      isInt: true,
-      validate: {
-        len: [1]
-      }
+      type: DataTypes.INTEGER,
+      isInt: true
     },
     description: {
       type: DataTypes.TEXT

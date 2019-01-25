@@ -1,7 +1,7 @@
 -- DATABASE CREATION
-DROP DATABASE IF EXISTS DBNAMEHERE; 
+DROP DATABASE IF EXISTS onyourmark; 
 
 
 
--- Creates the "DBNAMEHERE" database --
-CREATE DATABASE DBNAMEHERE;
+-- Creates the "onyourmark" database --
+CREATE DATABASE onyourmark;
