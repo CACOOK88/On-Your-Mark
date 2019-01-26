@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Artist23!",
+=======
+    "password": "N3wlife!19",
+>>>>>>> 2e5dd25b4149fa199b5c2eb52dfbefd47be8d0ed
     "database": "onyourmark",
     "host": "127.0.0.1",
     "dialect": "mysql"
