@@ -108,3 +108,8 @@ body {
   .card-foot-txt {
     font-family: 'Encode Sans Condensed', sans-serif;
   }
+
+  .race-card {
+    min-width: 250px !important;
+    max-width: 250px !important;
+  }
