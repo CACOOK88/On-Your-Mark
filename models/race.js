@@ -40,7 +40,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     raceLength: {
-      type: DataTypes.INTEGER
+      type: DataTypes.STRING
     },
     description: {
       type: DataTypes.TEXT

@@ -9,7 +9,7 @@ function createNewRace(event) {
         firstName: $('#firstName').val().trim(),
         lastName: $('#lastName').val().trim(),
         raceName: $('#raceName').val().trim(),
-        raceType: $('#raceType').val().trim(),
+        category: $('#category').val().trim(),
         street: $('#street').val().trim(),
         city: $('#city').val().trim(),
         state: $('#state').val(),
@@ -34,7 +34,7 @@ function createNewRace(event) {
     $('#firstName').val('')
     $('#lastName').val('')
     $('#raceName').val('')
-    $('#raceType').val('')
+    $('#category').val('')
     $('#street').val('')
     $('#city').val('')
     $('#state').val('')

@@ -15,6 +15,8 @@ module.exports = function(app) {
       where: {
         category: req.params.category
       }
+    }).then(function(data) {
+      res.json(data)
     })
   })
 
@@ -25,7 +27,7 @@ module.exports = function(app) {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       raceName: req.body.raceName,
-      raceType: req.body.raceType,
+      category: req.body.category,
       street: req.body.street,
       city: req.body.city,
       state: req.body.state,
