@@ -117,3 +117,7 @@ body {
   .spacer {
     height: 50px;
   }
+  .fas {
+    color: #FA7268;
+    font-size: 50px;
+  }
