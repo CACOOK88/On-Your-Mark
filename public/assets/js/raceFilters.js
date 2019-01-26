@@ -4,15 +4,17 @@ $(document).ready(function() {
 
   getAllRaces()
 
-  $(document).on('click', '.filterSubmit', getRaces)
-  $(document).on('click', '.bikeFilter', getBikeRaces)
-  $(document).on('click', '.obstacleFilter', getObstacleRaces)
-  $(document).on('click', '.allRaces', getAllRaces)
-
-  function getRaces() {
-    let filter = $('#category').val()
-    
-  }
+  $('#category').change(function() {
+    if ( $(this).val() == 'all' ) {
+      getAllRaces()
+    } else if ( $(this).val() == 'run' ) {
+      getRunRaces()
+    } else if ( $(this).val() == 'bike' ) {
+      getBikeRaces()
+    } else if ( $(this).val() == 'obstacle' ) {
+      getObstacleRaces()
+    }
+  })  
 
   function getAllRaces() {
     console.log(`you clicked get all races`)
@@ -20,6 +22,7 @@ $(document).ready(function() {
 
       console.log(data)
       // TAKE DATA AND RENDER ROWS OF INFORMATION
+      createRaceCards(data)
     })
   }
 
@@ -31,6 +34,7 @@ $(document).ready(function() {
 
       console.log(data)
       // TAKE DATA AND RENDER ROWS
+      createRaceCards(data)
     })
   }
 
@@ -42,6 +46,7 @@ $(document).ready(function() {
       
       console.log(data)
       // TAKE DATA AND RENDER ROWS
+      createRaceCards(data)
     })
   }
 
@@ -53,25 +58,32 @@ $(document).ready(function() {
       
       console.log(data)
       // TAKE DATA AND RENDER ROWS
+      createRaceCards(data)
     })
+  }
+
+  function createRaceCards(data) {
+
   }
 
   // *******************************************************
   //                CAROUSEL JAVASCRIPT
   // *******************************************************
-//   var slideIndex = 0;
-//   carousel();
-//   function carousel() {
-//     var i;
-//     var x = document.getElementsByClassName("sportslide");
-//     for (i = 0; i < x.length; i++) {
-//       x[i].style.display = "none";
-//     }
-//     slideIndex++;
-//     if (slideIndex > x.length) {
-//       slideIndex = 1
-//     }
-//     x[slideIndex - 1].style.display = "block";
-//     setTimeout(carousel, 4000); // Change image every 4 seconds
-//   }
+    // Carousel code
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("sportslide");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {
+        slideIndex = 1
+      }
+      x[slideIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000); // Change image every 4 seconds
+    }
 })
