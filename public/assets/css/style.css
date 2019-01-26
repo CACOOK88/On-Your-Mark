@@ -62,3 +62,22 @@ body {
   .gen-text {
     font-family: 'Encode Sans Condensed', sans-serif;
   }
+
+  .logo-style {
+    font-family: 'Anton', sans-serif;
+  }
+
+  .btn {
+    background-color: #FA7268;
+    border: none;
+  }
+
+  .nav-link {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 20px;
+  }
+
+  .card-header {
+    background-color: #FA7268;
+    color: white;
+  }

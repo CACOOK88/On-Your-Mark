@@ -13,6 +13,8 @@
 
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Anton|Encode+Sans+Condensed|Libre+Franklin" rel="stylesheet">
+<!-- Carousel slide -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  
@@ -23,13 +25,13 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-xl|lg|md|sm navbar-dark sticky-top shadow-lg" id="nav-style">
-    <a class="navbar-brand" href="#">On Your Mark</a>
-    <img src="" alt="" style="width:40px;">
+    <a class="navbar-brand logo-style" href="#">
+    <img src="/assets/img/onyourmarklogo.svg" alt="Logo" style="width:40px;">On Your Mark</a>
 
     <!-- Nav Links -->
     <ul class="nav list-inline justify-content-end">
       <li class="nav-item">
-        <a class="nav-link" href="#">Races</a>
+        <a class="nav-link" href="/assets/races.html">Races</a>
       </li>
       <!-- <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -40,25 +42,26 @@
   <!-- Landing page carousel/page start -->
   <div class="row carousel text-center w3-display-container mb-5">
 
-    <div class="overlay"><img class="sportslide" src="/assets/img/Cycling_competition_race.jpg" alt="image2"></div>
-    <div class="overlay"><img class="sportslide" src="/assets/img/Joggers_running_outdoors_fitness_bridge.jpg" alt="image3"></div>
-    <div class="overlay"><img class="sportslide" src="/assets/img/colorRun.jpg" alt="image1"></div>
+    <div class="overlay"><img class="sportslide w3-animate-right" src="/assets/img/Cycling_competition_race.jpg" alt="image2"></div>
+    <div class="overlay"><img class="sportslide w3-animate-right" src="/assets/img/Joggers_running_outdoors_fitness_bridge.jpg" alt="image3"></div>
+    <div class="overlay"><img class="sportslide w3-animate-right" src="/assets/img/colorRun.jpg" alt="image1"></div>
 
     <div class="centered text-white">
       <h1 class="display-1">On Your Mark</h1>
 
       <!-- Drop Down Race Selection -->
-      <label for="selectEvent subhead">Type of Event</label>
+      <label for="selectEvent" class="subhead mb-4">Type of Event</label>
       <select class="form-control" id="category">
         <option selected>Select One...</option>
-        <option>Running Event</option>
-        <option>Biking Event</option>
-        <option>Obstacle Event</option>
+        <option value="1">Running Event</option>
+        <option value="1">Biking Event</option>
+        <option value="1">Obstacle Event</option>
       </select>
     </div>
 
   </div>
-  <div class="container">
+  <div class="container" id="show-form" style="display:none">
+  <!-- move into css and do percentage -->
     <div class="card" style="width: 54rem;">
       <div class="card-header subhead">Event Sign Up</div>
       <div class="card-body">
@@ -204,7 +207,7 @@
               </div>
 
               <div class="form-row">
-            <div class="form-group col gen-text">
+            <div class="form-group col-sm-12 gen-text">
               <label for="description">Tell us more about your race!</label>
               <textarea class="form-control" id="description" rows="3"></textarea>
             </div>
@@ -240,6 +243,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 
     <script>
+      // Carousel code
       var slideIndex = 0;
       carousel();
 
@@ -256,6 +260,17 @@
         x[slideIndex - 1].style.display = "block";
         setTimeout(carousel, 4000); // Change image every 4 seconds
       }
+
+      // Toggle Form code - change to vanilla js
+      $(function() {
+    $('#category').change(function(){
+        if ($(this).val() == "1") {
+            $('#show-form').show();
+        } else {
+            $('#show-form').hide();
+        }
+    });
+});
     </script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
