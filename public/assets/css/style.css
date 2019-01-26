@@ -1,5 +1,8 @@
 
-* {box-sizing: border-box}
+* {
+  box-sizing: border-box
+}
+
 body {
     background-color: #55AFB8
 }
@@ -22,6 +25,7 @@ body {
   margin-right: auto;
   width: 50%;
 }
+
 .overlay:before  {
         content: " ";
         z-index: 10;
@@ -42,83 +46,84 @@ body {
 }
 
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 30;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
 
-  #nav-style {
-      background-color: #FA7268;
-  }
-
-  a:link {
-    color: white;
-  }
-
-  .display-1 {
-    font-family: 'Anton', sans-serif;
-  }
-
-  .subhead {
-    font-family: 'Encode Sans Condensed', sans-serif;
-    font-size: 25px;
-  }
-
-  .gen-text {
-    font-family: 'Encode Sans Condensed', sans-serif;
-  }
-
-  .logo-style {
-    font-family: 'Anton', sans-serif;
-  }
-
-  .btn {
+#nav-style {
     background-color: #FA7268;
-    border: none;
-  }
+}
 
-  .nav-link {
-    font-family: 'Encode Sans Condensed', sans-serif;
-    font-size: 20px;
-    color: white;
-  }
+a:link {
+  color: white;
+}
 
-  .card-header {
-    background-color: #FA7268;
-    color: white;
-  }
+.display-1 {
+  font-family: 'Anton', sans-serif;
+}
 
-  .modal-header {
-    background-color: #FA7268;
-    color: white;
-  }
+.subhead {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 25px;
+}
 
-  .modal-title {
-    font-family: 'Anton', sans-serif;
-    font-size: 20px;
-  }
+.gen-text {
+  font-family: 'Encode Sans Condensed', sans-serif;
+}
 
-  .modal-body {
-    font-family: 'Encode Sans Condensed', sans-serif;
-    font-size: 16px;
-  }
+.logo-style {
+  font-family: 'Anton', sans-serif;
+}
 
-  .card-foot-txt {
-    font-family: 'Encode Sans Condensed', sans-serif;
-  }
+.btn {
+  background-color: #FA7268;
+  border: none;
+}
 
-  .race-card {
-    min-width: 250px !important;
-    max-width: 250px !important;
-    font-family: 'Encode Sans Condensed', sans-serif;
-  }
+.nav-link {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 20px;
+  color: white;
+}
 
-  .spacer {
-    height: 50px;
-  }
-  .fas {
-    color: #FA7268;
-    font-size: 50px;
-  }
+.card-header {
+  background-color: #FA7268;
+  color: white;
+}
+
+.modal-header {
+  background-color: #FA7268;
+  color: white;
+}
+
+.modal-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+}
+
+.modal-body {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 16px;
+}
+
+.card-foot-txt {
+  font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.race-card {
+  min-width: 250px !important;
+  max-width: 250px !important;
+  font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.fas {
+  color: #FA7268;
+  font-size: 50px;
+}

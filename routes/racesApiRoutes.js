@@ -3,6 +3,7 @@
 const db = require('../models')
 
 module.exports = function(app) {
+  // GET ALL RACES AND RETURN DATA
   app.get('/api/races', function(req, res) {
     db.Race.findAll({})
       .then(function(data) {
@@ -10,6 +11,7 @@ module.exports = function(app) {
       })
   })
 
+  // GET RACES THAT MATCH THE URL CATEGORY
   app.get('/api/races/:category', function(req, res) {
     db.Race.findAll( {
       where: {
@@ -20,9 +22,8 @@ module.exports = function(app) {
     })
   })
 
+  // CREATE NEW RACE AND INSERT TO DATABASE
   app.post('/api/races', function(req, res) {
-    console.log(`inside races api routes`)
-    console.log(req.body)
     db.Race.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -40,7 +41,6 @@ module.exports = function(app) {
       participantCap: req.body.participantCap,
       date: req.body.date
     }).then(function(data) {
-      console.log(data)
       res.json(data)
     }).catch(function(error) {
       res.json(error)

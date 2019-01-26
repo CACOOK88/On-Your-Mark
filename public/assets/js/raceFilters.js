@@ -62,7 +62,7 @@ $(document).ready(function() {
   // FUNCTION TO DYNAMICALLY INSERT THE HTML FOR RACE CARDS
   function createRaceCards(data) {
     if (data.length < 1) {
-      let noResults = `<h1>Oops! Looks like there are no races here</h1>`
+      let noResults = `<h1 class="justify-content-center">Oops! Looks like there are no races here</h1>`
       $('.card-deck').append(noResults)
     } else {
       // LOOP THROUGH DATA AND RENDER HTML
