@@ -28,7 +28,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     zip: {
-      type: DataTypes.INTEGER
+      type: DataTypes.STRING
     },
     phoneNumber: {
       type: DataTypes.TEXT
@@ -46,7 +46,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.TEXT
     },
     participantCap: {
-      type: DataTypes.INTEGER
+      type: DataTypes.STRING
     }, 
     date: {
       type: DataTypes.STRING
