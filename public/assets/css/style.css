@@ -84,3 +84,18 @@ body {
     background-color: #FA7268;
     color: white;
   }
+
+  .modal-header {
+    background-color: #FA7268;
+    color: white;
+  }
+
+  .modal-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+  }
+
+  .modal-body {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 16px;
+  }
