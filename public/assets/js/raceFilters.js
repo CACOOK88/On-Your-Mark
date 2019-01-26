@@ -1,10 +1,12 @@
 // JS FOR ALL RACES HTML PAGE, TABLE FILTERS WILL GO HERE IF WE GET TO IT
-
+// WAIT FOR HTML LOAD BEFORE PERFORMING ANY JS
 $(document).ready(function() {
-
+  // GET ALL RACES WHEN PAGE LOADS
   getAllRaces()
 
+  // LISTENER TO CHECK IF USER CHANGES DROP DOWN FILTER
   $('#category').change(function() {
+    // IF USER CHANGES FILTER, RUN CORRESPONDING FUNCTION
     if ( $(this).val() == 'all' ) {
       getAllRaces()
     } else if ( $(this).val() == 'run' ) {
@@ -20,7 +22,7 @@ $(document).ready(function() {
     console.log(`you clicked get all races`)
     $.get('/api/races', function(data) {
       // CLEAR TABLE OF CURRENT DATA
-      // clearCards()
+      clearCards()
       console.log(data)
       // TAKE DATA AND RENDER ROWS OF INFORMATION
       createRaceCards(data)
@@ -57,11 +59,13 @@ $(document).ready(function() {
     })
   }
 
+  // FUNCTION TO DYNAMICALLY INSERT THE HTML FOR RACE CARDS
   function createRaceCards(data) {
     if (data.length < 1) {
       let noResults = `<h1>Oops! Looks like there are no races here</h1>`
       $('.card-deck').append(noResults)
     } else {
+      // LOOP THROUGH DATA AND RENDER HTML
       for ( let i = 0; i < data.length; i++ ) {
         let name = data[i].raceName
         let date = data[i].date
@@ -92,21 +96,21 @@ $(document).ready(function() {
   // *******************************************************
   //                CAROUSEL JAVASCRIPT
   // *******************************************************
-    // Carousel code
-    var slideIndex = 0;
-    carousel();
+  // CAROUSEL CODE
+  var slideIndex = 0;
+  carousel();
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("sportslide");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > x.length) {
-        slideIndex = 1
-      }
-      x[slideIndex - 1].style.display = "block";
-      setTimeout(carousel, 4000); // Change image every 4 seconds
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("sportslide");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
     }
+    slideIndex++;
+    if (slideIndex > x.length) {
+      slideIndex = 1
+    }
+    x[slideIndex - 1].style.display = "block";
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+  }
 })
