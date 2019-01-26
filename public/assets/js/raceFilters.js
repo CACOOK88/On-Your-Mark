@@ -67,8 +67,8 @@ $(document).ready(function() {
         let date = data[i].date
         let address = data[i].street + "<br>" + data[i].city + ", " + data[i].state + " " + data[i].zip
         let raceType = data[i].category
-        let card = '<div class="card">'
-        card += '<img class="card-img-top d-block" src="../assets/img/cupid.jpg" alt="Cupid">'
+        let card = '<div class="card race-card">'
+        card += '<img class="card-img-top d-block" src="../assets/img/onyourmarklogo_coral.svg" alt="Cupid">'
         card += '<div class="card-body">'
         card += '<h5 class="card-title text-center">' + name + '</h5>'
         card += '<p class="card-text">'
