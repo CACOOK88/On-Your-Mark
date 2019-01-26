@@ -217,19 +217,19 @@
                   You must agree before submitting.
                 </div>
               </div>
-            <button type="submit" class="btn btn-primary gen-text submit">Submit</button>
+            <button type="submit" class="btn btn-primary gen-text submit" data-toggle="modal" data-target="#success-modal">Submit</button>
           </div>
         </form>
       </div>
     </div>
 
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#success-modal">
     Launch modal
-  </button>
+  </button> -->
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="success-modalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -239,11 +239,11 @@
           </button>
         </div>
         <div class="modal-body text-center">
-          <div><img src="/assets/img/001-winner.eps" alt="Logo" style="width:40px;"></div>
+          <div><img src="/assets/img/001-winner.png" alt="Logo" style="width:40px;"></div>
           Your race has been added successfully!
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Ok</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
         </div>
       </div>
     </div>
