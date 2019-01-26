@@ -25,17 +25,18 @@ module.exports = function(app) {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       raceName: req.body.raceName,
-      // category: req.body.category,
+      raceType: req.body.raceType,
       street: req.body.street,
       city: req.body.city,
       state: req.body.state,
       zip: req.body.zip,
-      phone: req.body.phone,
+      phoneNumber: req.body.phoneNumber,
       email: req.body.email,
       url: req.body.url,
       raceLength: req.body.raceLength,
       description: req.body.description,
-      participantCap: req.body.participantCap
+      participantCap: req.body.participantCap,
+      date: req.body.date
     }).then(function(data) {
       console.log(data)
       res.json(data)
