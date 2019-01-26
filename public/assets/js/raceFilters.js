@@ -19,7 +19,8 @@ $(document).ready(function() {
   function getAllRaces() {
     console.log(`you clicked get all races`)
     $.get('/api/races', function(data) {
-
+      // CLEAR TABLE OF CURRENT DATA
+      // clearCards()
       console.log(data)
       // TAKE DATA AND RENDER ROWS OF INFORMATION
       createRaceCards(data)
@@ -30,9 +31,7 @@ $(document).ready(function() {
     console.log(`you clicked get run races`)
     $.get('/api/races/run', function(data) {
       // CLEAR TABLE OF CURRENT DATA
-
-
-      console.log(data)
+      clearCards()
       // TAKE DATA AND RENDER ROWS
       createRaceCards(data)
     })
@@ -42,9 +41,7 @@ $(document).ready(function() {
     console.log(`you clicked get bike races`)
     $.get('/api/races/bike', function(data) {
       // CLEAR TABLE OF CURRENT DATA
-
-      
-      console.log(data)
+      clearCards()
       // TAKE DATA AND RENDER ROWS
       createRaceCards(data)
     })
@@ -54,16 +51,42 @@ $(document).ready(function() {
     console.log(`you clicked get obstacle races`)
     $.get('/api/races/obstacle', function(data) {
       // CLEAR TABLE OF CURRENT DATA
-
-      
-      console.log(data)
+      clearCards()
       // TAKE DATA AND RENDER ROWS
       createRaceCards(data)
     })
   }
 
   function createRaceCards(data) {
+    if (data.length < 1) {
+      let noResults = `<h1>Oops! Looks like there are no races here</h1>`
+      $('.card-deck').append(noResults)
+    } else {
+      for ( let i = 0; i < data.length; i++ ) {
+        let name = data[i].raceName
+        let date = data[i].date
+        let address = data[i].street + "<br>" + data[i].city + ", " + data[i].state + " " + data[i].zip
+        let raceType = data[i].category
+        let card = '<div class="card">'
+        card += '<img class="card-img-top d-block" src="../assets/img/cupid.jpg" alt="Cupid">'
+        card += '<div class="card-body">'
+        card += '<h5 class="card-title text-center">' + name + '</h5>'
+        card += '<p class="card-text">'
+        card += '<p class="text-center" id="date">' + date + '</p>'
+        card += '<p class="text-center" id="address">' + address + '</p>'
+        card += '</p>'
+        card += '</div>'
+        card += '<div class="card-footer">'
+        card += '<p class="text-center"><small class="text-muted">' + raceType + ' event</small></p>'
+        card += '</div>'
+        card += '</div>'
+        $('.card-deck').append(card)
+      }
+    }
+  }
 
+  function clearCards() {
+    $('.card-deck').empty()
   }
 
   // *******************************************************
