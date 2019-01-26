@@ -22,7 +22,7 @@ require("./routes/htmlRoutes.js")(app);
 require("./routes/racesApiRoutes.js")(app);
 
 // SYNC DB THEN START APP LISTENER
-db.sequelize.sync().then(function() {
+db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

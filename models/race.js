@@ -5,61 +5,33 @@ module.exports = function (sequelize, DataTypes) {
     // insert key value for each column
     firstName: {
       type: DataTypes.STRING, 
-      allowNull: false,
-      validate: {
-        len: [3]
-      }
+      allowNull: false
     },
     lastName: {
       type: DataTypes.STRING, 
-      allowNull: false,
-      validate: {
-        len: [3]
-      }
+      allowNull: false
     },
     raceName: {
       type: DataTypes.STRING, 
-      allowNull: false,
-      validate: {
-        len: [3]
-      }
+      allowNull: false
     },
-    // category: {
-    //   type: DataTypes.STRING, 
-    //   allowNull: false
-    // },
+    category: {
+      type: DataTypes.STRING
+    },
     street: {
-      type: DataTypes.STRING, 
-      allowNull: false,
-      validate: {
-        len: [5]
-      }
+      type: DataTypes.STRING
     },
     city: {
-      type: DataTypes.STRING, 
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      type: DataTypes.STRING
     },
     state: {
-      type: DataTypes.STRING, 
-      allowNull: false,
-      validate: {
-        len: [2,2]
-      }
+      type: DataTypes.STRING
     },
     zip: {
-      type: DataTypes.INTEGER, 
-      allowNull: false,
-      isInt: true,
-      validate: {
-        len: [5,5]
-      }
+      type: DataTypes.INTEGER
     },
-    phone: {
-      type: DataTypes.INTEGER, 
-      isInt: true
+    phoneNumber: {
+      type: DataTypes.TEXT
     },
     email: {
       type: DataTypes.STRING
@@ -68,15 +40,16 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     raceLength: {
-      type: DataTypes.INTEGER,
-      isInt: true
+      type: DataTypes.STRING
     },
     description: {
       type: DataTypes.TEXT
     },
     participantCap: {
-      type: DataTypes.INTEGER, 
-      isInt: true
+      type: DataTypes.INTEGER
+    }, 
+    date: {
+      type: DataTypes.STRING
     }
   })
   return Race

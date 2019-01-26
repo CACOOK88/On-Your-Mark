@@ -8,6 +8,6 @@ module.exports = function(app) {
   })
 
   app.get('/races', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/races.html'))
+    res.sendFile(path.join(__dirname, '../public/assets/races.html'))
   })
 }
