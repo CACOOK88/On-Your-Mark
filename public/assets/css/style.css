@@ -112,6 +112,7 @@ body {
   .race-card {
     min-width: 250px !important;
     max-width: 250px !important;
+    font-family: 'Encode Sans Condensed', sans-serif;
   }
 
   .spacer {
