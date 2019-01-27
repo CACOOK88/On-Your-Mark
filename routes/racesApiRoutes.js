@@ -22,8 +22,19 @@ module.exports = function(app) {
     })
   })
 
+  app.get('api/races/:id', function(req, res) {
+    db.Race.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
+      res.json(data)
+    })
+  })
+
   // CREATE NEW RACE AND INSERT TO DATABASE
-  app.post('/api/races', function(req, res) {
+  app.post('/api/races/', function(req, res) {
+    // console.log(req.body)
     db.Race.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -44,6 +55,16 @@ module.exports = function(app) {
       res.json(data)
     }).catch(function(error) {
       res.json(error)
+    })
+  })
+
+  app.delete('/api/races/:id', function(req, res) {
+    db.Race.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
+      res.json(data)
     })
   })
 }

@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   function createNewRace(event) {
     event.preventDefault();
-    console.log(`you clicked submit`)
+    // console.log(`you clicked submit`)
     var newRace = {
       firstName: $('#firstName').val().trim(),
       lastName: $('#lastName').val().trim(),
@@ -26,9 +26,9 @@ $(document).ready(function() {
     };
 
     // SEND THE NEW RACE INFO TO THE POST ROUTE
-    $.post('/api/races', newRace, function (data) {
-      //   console.log(`back in main.js`)
-      //   console.log(data)
+    $.post('/api/races/', newRace, function (data) {
+        // console.log(`back in main.js`)
+        // console.log(data)
     });
 
     // CLEAR ALL INPUT FIELDS AFTER SUBMISSION
