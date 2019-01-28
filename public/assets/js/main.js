@@ -35,7 +35,6 @@ $(document).ready(function() {
     $('#firstName').val('')
     $('#lastName').val('')
     $('#raceName').val('')
-    $('#category').val('')
     $('#street').val('')
     $('#city').val('')
     $('#state').val('')

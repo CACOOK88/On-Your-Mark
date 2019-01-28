@@ -119,6 +119,11 @@ a:link {
   font-family: 'Encode Sans Condensed', sans-serif;
 }
 
+.race-card:hover {
+  transform: translate(5px, -5px);
+  transition: 0.2s all ease-in-out;
+}
+
 .spacer {
   height: 50px;
 }
@@ -126,4 +131,27 @@ a:link {
 .fas {
   color: #FA7268;
   font-size: 50px;
+}
+
+.email-link-modal {
+  color: black !important;
+}
+
+.no-link-deco {
+  text-decoration: none;
+  color: black;
+}
+
+.no-link-deco:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.race-title-modal {
+  color:black;
+}
+.race-title-modal:hover {
+  text-decoration: none;
+  color: #eee;
+  transition: 0.3s all ease-in;
 }
