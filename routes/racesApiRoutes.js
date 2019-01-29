@@ -22,8 +22,10 @@ module.exports = function(app) {
     })
   })
 
-  app.get('api/races/:id', function(req, res) {
-    db.Race.findOne({
+  app.get('/api/races/individual/:id', function(req, res) {
+    let id = req.params.id
+    console.log(id)
+    db.Race.findAll({
       where: {
         id: req.params.id
       }
