@@ -2,7 +2,24 @@
 // WAIT FOR HTML LOAD BEFORE PERFORMING ANY JS
 $(document).ready(function() {
   // WHEN THE SUBMIT BUTTON IS CLICKED RUN createNewRace FUNCTION
-  $(document).on('click', '.submit', createNewRace);
+  
+  // $(document).on('click', '.submit', createNewRace);
+
+  $('.submit').on('click', function(e) {
+    e.preventDefault()
+    console.log(e)
+    console.log(`clicked submit `)
+  })
+
+  // $('.submit').on('submit', function(e) {
+  //   e.preventDefault()
+  //   console.log(`submitted`)
+  // })
+
+
+  function clickHiddenButton(event) {
+    console.log(`inside clickhiddenbutton`)
+  }
 
   function createNewRace(event) {
     event.preventDefault();
@@ -29,6 +46,7 @@ $(document).ready(function() {
     $.post('/api/races/', newRace, function (data) {
         // console.log(`back in main.js`)
         // console.log(data)
+        clickHiddenButton()
     });
 
     // CLEAR ALL INPUT FIELDS AFTER SUBMISSION
