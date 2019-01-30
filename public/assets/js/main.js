@@ -3,23 +3,7 @@
 $(document).ready(function() {
   // WHEN THE SUBMIT BUTTON IS CLICKED RUN createNewRace FUNCTION
   
-  // $(document).on('click', '.submit', createNewRace);
-
-  $('.submit').on('click', function(e) {
-    e.preventDefault()
-    console.log(e)
-    console.log(`clicked submit `)
-  })
-
-  // $('.submit').on('submit', function(e) {
-  //   e.preventDefault()
-  //   console.log(`submitted`)
-  // })
-
-
-  function clickHiddenButton(event) {
-    console.log(`inside clickhiddenbutton`)
-  }
+  $(document).on('click', '.submit', createNewRace);
 
   function createNewRace(event) {
     event.preventDefault();
