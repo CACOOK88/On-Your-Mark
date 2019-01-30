@@ -155,6 +155,7 @@ $(document).ready(function() {
     modalAddress.html(data.street + '<br>' + data.city + ', ' + data.state + ' ' + data.zip)
     let modalDate = $('.date-modal')
     modalDate.text(data.date)
+    modalDate.addClass('.no-link-deco')
     let modalEmail = $('.email-link-modal')
     modalEmail.text(data.email)
     let modalParticipant = $('.participant-modal')

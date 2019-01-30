@@ -2,6 +2,7 @@
 // WAIT FOR HTML LOAD BEFORE PERFORMING ANY JS
 $(document).ready(function() {
   // WHEN THE SUBMIT BUTTON IS CLICKED RUN createNewRace FUNCTION
+  
   $(document).on('click', '.submit', createNewRace);
 
   function createNewRace(event) {
@@ -29,6 +30,7 @@ $(document).ready(function() {
     $.post('/api/races/', newRace, function (data) {
         // console.log(`back in main.js`)
         // console.log(data)
+        clickHiddenButton()
     });
 
     // CLEAR ALL INPUT FIELDS AFTER SUBMISSION
