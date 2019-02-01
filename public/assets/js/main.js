@@ -30,7 +30,7 @@ $(document).ready(function() {
     $.post('/api/races/', newRace, function (data) {
         // console.log(`back in main.js`)
         // console.log(data)
-        clickHiddenButton()
+
     });
 
     // CLEAR ALL INPUT FIELDS AFTER SUBMISSION

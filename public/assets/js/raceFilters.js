@@ -89,15 +89,12 @@ $(document).ready(function() {
   }
 
   function fillUpdateModal() {
-    // ****************************************************************************************************************************************************************************************
-    // ****************************************************************************************************************************************************************************************
-    // ****************************************************************************************************************************************************************************************
-
     let id = $(this).attr('data-id')
     $.get('/api/races/individual/' + id, function(data) {
       let dataObj = data[0]
       console.log(dataObj)
       $('.modal-title').text('Update "' + dataObj.raceName + '"')
+      $('.modal-title').attr('category', dataObj.category)
       $('#firstName').val(dataObj.firstName)
       $('#lastName').val(dataObj.lastName)
       $('#raceName').val(dataObj.raceName)
@@ -121,6 +118,34 @@ $(document).ready(function() {
     // ****************************************************************************************************************************************************************************************
     // ****************************************************************************************************************************************************************************************
     // ****************************************************************************************************************************************************************************************
+    var updateRace = {
+      id: parseInt($('.submit').attr('data-id')),
+      firstName: $('#firstName').val().trim(),
+      lastName: $('#lastName').val().trim(),
+      raceName: $('#raceName').val().trim(),
+      category: $('.modal-title').attr('category'),
+      street: $('#street').val().trim(),
+      city: $('#city').val().trim(),
+      state: $('#state').val(),
+      zip: $('#zip').val().trim(),
+      phoneNumber: $('#phoneNumber').val().trim(),
+      email: $('#email').val().trim(),
+      url: $('#url').val().trim(),
+      raceLength: $('#raceLength').val().trim(),
+      description: $('#description').val().trim(),
+      participantCap: $('#participantCap').val().trim(),
+      date: $('#date').val().trim()
+    };
+    console.log(updateRace)
+
+    $.ajax({
+      method: 'PUT',
+      url: '/api/races',
+      data: updateRace
+    }).then(function() {
+      console.log(`finished ajax post`)
+    })
+    setTimeout(getAllRaces, 500)
   }
 
   // FUNCTION TO DYNAMICALLY INSERT THE HTML FOR RACE CARDS
