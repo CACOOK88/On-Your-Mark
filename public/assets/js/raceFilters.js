@@ -6,6 +6,8 @@ $(document).ready(function() {
 
   $(document).on('click', '.delete-race', deleteRace)
   $(document).on('click', '.race-modal-link', getOneRace)
+  $(document).on('click', '.update-race', fillUpdateModal) 
+  $(document).on('click', '.update-submit', updateRace) 
 
   // LISTENER TO CHECK IF USER CHANGES DROP DOWN FILTER
   $('#category').change(function() {
@@ -86,6 +88,66 @@ $(document).ready(function() {
     })
   }
 
+  function fillUpdateModal() {
+    let id = $(this).attr('data-id')
+    $.get('/api/races/individual/' + id, function(data) {
+      let dataObj = data[0]
+      console.log(dataObj)
+      $('.modal-title').text('Update "' + dataObj.raceName + '"')
+      $('.modal-title').attr('category', dataObj.category)
+      $('#firstName').val(dataObj.firstName)
+      $('#lastName').val(dataObj.lastName)
+      $('#raceName').val(dataObj.raceName)
+      $('#street').val(dataObj.street)
+      $('#city').val(dataObj.city)
+      $('#state').val(dataObj.state)
+      $('#zip').val(dataObj.zip)
+      $('#phoneNumber').val(dataObj.phoneNumber)
+      $('#email').val(dataObj.email)
+      $('#url').val(dataObj.url)
+      $('#raceLength').val(dataObj.raceLength)
+      $('#description').val(dataObj.description)
+      $('#participantCap').val(dataObj.participantCap)
+      $('#date').val(dataObj.date)
+
+      $('.submit').attr('data-id', id)
+    })
+  }
+
+  function updateRace() {
+    // ****************************************************************************************************************************************************************************************
+    // ****************************************************************************************************************************************************************************************
+    // ****************************************************************************************************************************************************************************************
+    var updateRace = {
+      id: parseInt($('.submit').attr('data-id')),
+      firstName: $('#firstName').val().trim(),
+      lastName: $('#lastName').val().trim(),
+      raceName: $('#raceName').val().trim(),
+      category: $('.modal-title').attr('category'),
+      street: $('#street').val().trim(),
+      city: $('#city').val().trim(),
+      state: $('#state').val(),
+      zip: $('#zip').val().trim(),
+      phoneNumber: $('#phoneNumber').val().trim(),
+      email: $('#email').val().trim(),
+      url: $('#url').val().trim(),
+      raceLength: $('#raceLength').val().trim(),
+      description: $('#description').val().trim(),
+      participantCap: $('#participantCap').val().trim(),
+      date: $('#date').val().trim()
+    };
+    console.log(updateRace)
+
+    $.ajax({
+      method: 'PUT',
+      url: '/api/races',
+      data: updateRace
+    }).then(function() {
+      console.log(`finished ajax post`)
+    })
+    setTimeout(getAllRaces, 500)
+  }
+
   // FUNCTION TO DYNAMICALLY INSERT THE HTML FOR RACE CARDS
   function createRaceCards(data) {
     if (data.length < 1) {
@@ -126,7 +188,12 @@ $(document).ready(function() {
         let deleteBtn = $('<p>').addClass('btn btn-sm btn-outline-secondary btn-block delete-race mb-0')
         deleteBtn.text('Delete This Race')
         deleteBtn.attr('data-id', id)
-
+        let updateBtn = $('<p>').addClass('btn btn-sm btn-outline-secondary btn-block update-race mt-1 m-0')
+        updateBtn.text('Update This Race')
+        updateBtn.attr('data-id', id)
+        updateBtn.attr('data-toggle', 'modal')
+        updateBtn.attr('data-target', '#update-modal')
+        
         card.append(modalLink)
         modalLink.append(img)
         modalLink.append(cardBody)
@@ -137,6 +204,7 @@ $(document).ready(function() {
         card.append(footer)
         footer.append(footerText)
         footerText.append(deleteBtn)
+        footerText.append(updateBtn)
         $('.card-deck').append(card)
       }
     }

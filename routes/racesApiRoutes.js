@@ -69,4 +69,16 @@ module.exports = function(app) {
       res.json(data)
     })
   })
+
+  app.put('/api/races', function(req, res) {
+    db.Race.update(req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      }).then(function(data) {
+        console.log(`update racesApiRoutes callback`)
+        res.json(data)
+      })
+  })
 }
