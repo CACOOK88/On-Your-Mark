@@ -94,6 +94,13 @@ body {
   color: white;
 }
 
+.card-title {
+  height: 45px;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+
 .modal-header {
   background-color: #FA7268;
   color: white;
